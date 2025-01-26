@@ -19,7 +19,7 @@ import { PublicAccess } from 'src/auth/decorators/public.decorator';
 import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.decorator';
 import { ApiResponseUpdated } from 'src/common/decorators/api-response-updated.decorator';
 import { ApiResponseDeleted } from 'src/common/decorators/api-response-deleted.decorator';
-import { Auth } from 'src/common/decorators/auth.decorator';
+import { Auth } from '../common/decorators/auth.decorator';
 
 @Controller('customers')
 export class CustomersController {

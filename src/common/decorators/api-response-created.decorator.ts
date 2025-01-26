@@ -12,5 +12,6 @@ export function ApiResponseCreated<T>( dto: new () => T, nameModule: string) {
     ApiUnauthorizedResponse({description: "Unauthorized"}),
     ApiBody({type: dto}),
     ApiInternalServerErrorResponse({description: "Internal Server Error"})
+
   );
 }

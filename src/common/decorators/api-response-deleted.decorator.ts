@@ -8,6 +8,6 @@ export function ApiResponseDeleted( nameModule:string ) {
     ApiBadRequestResponse({description: "Bad Request"}),
     ApiUnauthorizedResponse({description: "Unauthorized"}),
     ApiInternalServerErrorResponse({description: "Internal Server Error"}),
-    ApiParam({name: 'id', type: 'string', example: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"})
+    ApiParam({name: 'id', type: 'string', example: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"}),
   );
 }

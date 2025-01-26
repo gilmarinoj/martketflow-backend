@@ -51,4 +51,4 @@ import { DiscountProductsModule } from './discount-products/discount-products.mo
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }

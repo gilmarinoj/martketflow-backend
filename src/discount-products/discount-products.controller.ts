@@ -11,7 +11,9 @@ import { ApiResponseFindOne } from 'src/common/decorators/api-response-find-one.
 import { ApiResponseUpdated } from 'src/common/decorators/api-response-updated.decorator';
 import { ApiResponseDeleted } from 'src/common/decorators/api-response-deleted.decorator';
 import { Auth } from 'src/common/decorators/auth.decorator';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('discount-products')
 @Controller('discount-products')
 export class DiscountProductsController {
   constructor(
