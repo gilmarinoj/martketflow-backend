@@ -10,7 +10,9 @@ import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.
 import { ApiResponseFindOne } from 'src/common/decorators/api-response-find-one.decorator';
 import { ApiResponseDeleted } from 'src/common/decorators/api-response-deleted.decorator';
 import { Auth } from 'src/common/decorators/auth.decorator';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('warehouses')
 @Controller('warehouses')
 export class WarehousesController {
   constructor(private readonly warehousesService: WarehousesService) { }

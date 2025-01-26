@@ -12,7 +12,7 @@ import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PaginationDto } from '../common/dtos/pagination/pagination.dto';
-import { ApiBadRequestResponse, ApiCreatedResponse, ApiInternalServerErrorResponse, ApiUnauthorizedResponse } from '@nestjs/swagger';
+import { ApiBadRequestResponse, ApiCreatedResponse, ApiInternalServerErrorResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 import { ApiResponseCreated } from 'src/common/decorators/api-response-created.decorator';
 import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.decorator';
 import { ApiResponseFindOne } from 'src/common/decorators/api-response-find-one.decorator';
@@ -22,6 +22,7 @@ import { AdminAccess } from 'src/auth/decorators/admin.decorator';
 import { PublicAccess } from 'src/auth/decorators/public.decorator';
 import { Auth } from 'src/common/decorators/auth.decorator';
 
+@ApiTags('products')
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}

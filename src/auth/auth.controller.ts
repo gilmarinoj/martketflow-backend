@@ -5,7 +5,9 @@ import { LoginAuthDto } from './dto/login-auth.dto';
 import { ApiResponseCreated } from 'src/common/decorators/api-response-created.decorator';
 import { ApiResponseRegister } from 'src/common/decorators/api-response-register.decorator';
 import { ApiResponseLogin } from 'src/common/decorators/api-response-login.decorator';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) { }

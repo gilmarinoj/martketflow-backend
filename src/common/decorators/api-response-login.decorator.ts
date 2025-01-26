@@ -3,7 +3,7 @@ import { ApiBadRequestResponse, ApiBody, ApiInternalServerErrorResponse, ApiOkRe
 
 export function ApiResponseLogin<T>( dto: new () => T, nameModule: string) {
   return applyDecorators(
-    ApiOkResponse({description: `Login ${nameModule}`}),
+    ApiOkResponse({description: `${nameModule}`}),
     ApiOperation({summary: `This  method ${nameModule}`}),
     ApiBadRequestResponse({description: "Bad Request"}),
     ApiBody({type: dto}),

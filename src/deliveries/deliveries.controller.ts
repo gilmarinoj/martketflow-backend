@@ -4,7 +4,7 @@ import { CreateDeliveryDto } from './dto/create-delivery.dto';
 import { UpdateDeliveryDto } from './dto/update-delivery.dto';
 import { PaginationDto } from './../common/dtos/pagination/pagination.dto';
 import { AdminAccess } from 'src/auth/decorators/admin.decorator';
-import { ApiResponse } from '@nestjs/swagger';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ApiResponseCreated } from 'src/common/decorators/api-response-created.decorator';
 import { PublicAccess } from 'src/auth/decorators/public.decorator';
 import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.decorator';
@@ -13,6 +13,7 @@ import { ApiResponseUpdated } from 'src/common/decorators/api-response-updated.d
 import { ApiResponseDeleted } from 'src/common/decorators/api-response-deleted.decorator';
 import { Auth } from 'src/common/decorators/auth.decorator';
 
+@ApiTags('deliveries')
 @Controller('deliveries')
 export class DeliveriesController {
   constructor(private readonly deliveriesService: DeliveriesService) { }

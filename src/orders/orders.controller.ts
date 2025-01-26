@@ -4,7 +4,7 @@ import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
 import { PaginationDto } from './../common/dtos/pagination/pagination.dto';
 import { AdminAccess } from 'src/auth/decorators/admin.decorator';
-import { ApiResponse } from '@nestjs/swagger';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ApiResponseCreated } from 'src/common/decorators/api-response-created.decorator';
 import { PublicAccess } from 'src/auth/decorators/public.decorator';
 import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.decorator';
@@ -13,6 +13,7 @@ import { ApiResponseUpdated } from 'src/common/decorators/api-response-updated.d
 import { ApiResponseDeleted } from 'src/common/decorators/api-response-deleted.decorator';
 import { Auth } from 'src/common/decorators/auth.decorator';
 
+@ApiTags('orders')
 @Controller('orders')
 export class OrdersController {
   constructor(private readonly ordersService: OrdersService) { }

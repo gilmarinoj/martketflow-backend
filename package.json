@@ -1,8 +1,8 @@
 {
-  "name": "taller",
+  "name": "marketflow",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "system of a market",
+  "author": "gilmarinoj",
   "private": true,
   "type": "commonjs",
   "license": "UNLICENSED",

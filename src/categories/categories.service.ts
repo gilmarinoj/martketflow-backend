@@ -6,10 +6,7 @@ import { ManagerError } from './../common/errors/manager.error';
 import { PaginationDto } from '../common/dtos/pagination/pagination.dto';
 import { Repository, UpdateResult } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import {
-  ApiAllResponse,
-  ApiOneResponse,
-} from './../common/interfaces/api-response.interface';
+import {ApiAllResponse,ApiOneResponse} from './../common/interfaces/api-response.interface';
 
 @Injectable()
 export class CategoriesService {
