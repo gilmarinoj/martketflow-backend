@@ -5,8 +5,6 @@ import { UpdateCategoryDto } from './dto/update-category.dto';
 import { PaginationDto } from './../common/dtos/pagination/pagination.dto';
 import { AuthGuard } from './../auth/guards/auth.guard';
 import { RoleGuard } from './../auth/guards/role.guard';
-import { AdminAccess } from './../auth/decorators/admin.decorator';
-import { PublicAccess } from 'src/auth/decorators/public.decorator';
 import { ApiResponseCreated } from 'src/common/decorators/api-response-created.decorator';
 import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.decorator';
 import { ApiResponseFindOne } from 'src/common/decorators/api-response-find-one.decorator';
