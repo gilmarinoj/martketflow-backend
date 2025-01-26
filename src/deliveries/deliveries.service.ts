@@ -1,11 +1,7 @@
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, UpdateResult } from 'typeorm';
-
-import {
-  ApiAllResponse,
-  ApiOneResponse,
-} from './../common/interfaces/api-response.interface';
+import { ApiAllResponse, ApiOneResponse, } from './../common/interfaces/api-response.interface';
 import { CreateDeliveryDto } from './dto/create-delivery.dto';
 import { DeliveryEntity } from './entities/delivery.entity';
 import { ManagerError } from '../common/errors/manager.error';
@@ -17,7 +13,7 @@ export class DeliveriesService {
   constructor(
     @InjectRepository(DeliveryEntity)
     private readonly deliveriesRepository: Repository<DeliveryEntity>,
-  ) {}
+  ) { }
 
   async create(
     createDeliveryDto: CreateDeliveryDto,

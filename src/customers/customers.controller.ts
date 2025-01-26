@@ -1,21 +1,9 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-  Query,
-  ParseUUIDPipe,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query, ParseUUIDPipe, } from '@nestjs/common';
 import { CustomersService } from './customers.service';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
 import { PaginationDto } from 'src/common/dtos/pagination/pagination.dto';
-import { AdminAccess } from 'src/auth/decorators/admin.decorator';
 import { ApiResponseCreated } from 'src/common/decorators/api-response-created.decorator';
-import { PublicAccess } from 'src/auth/decorators/public.decorator';
 import { ApiResponseFindAll } from 'src/common/decorators/api-response-find-all.decorator';
 import { ApiResponseUpdated } from 'src/common/decorators/api-response-updated.decorator';
 import { ApiResponseDeleted } from 'src/common/decorators/api-response-deleted.decorator';
@@ -25,7 +13,7 @@ import { ApiTags } from '@nestjs/swagger';
 @ApiTags('customers')
 @Controller('customers')
 export class CustomersController {
-  constructor(private readonly customersService: CustomersService) {}
+  constructor(private readonly customersService: CustomersService) { }
 
   @Post()
   @Auth('ADMIN')

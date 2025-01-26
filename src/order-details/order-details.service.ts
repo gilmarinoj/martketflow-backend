@@ -5,10 +5,7 @@ import { PaginationDto } from '../common/dtos/pagination/pagination.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { OrderDetailEntity } from './entities/order-detail.entity';
 import { Repository, UpdateResult } from 'typeorm';
-import {
-  ApiAllResponse,
-  ApiOneResponse,
-} from './../common/interfaces/api-response.interface';
+import { ApiAllResponse, ApiOneResponse, } from './../common/interfaces/api-response.interface';
 import { ManagerError } from './../common/errors/manager.error';
 
 @Injectable()
@@ -16,7 +13,7 @@ export class OrderDetailsService {
   constructor(
     @InjectRepository(OrderDetailEntity)
     private readonly orderDetailsRepository: Repository<OrderDetailEntity>,
-  ) {}
+  ) { }
 
   async create(
     createOrderDetailDto: CreateOrderDetailDto,

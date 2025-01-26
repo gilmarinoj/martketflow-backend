@@ -11,4 +11,4 @@ import { UsersModule } from 'src/users/users.module';
   imports: [TypeOrmModule.forFeature([DeliveryOrderEntity]),
     UsersModule],
 })
-export class DeliveryOrdersModule {}
+export class DeliveryOrdersModule { }

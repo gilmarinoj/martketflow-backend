@@ -2,10 +2,7 @@ import { HttpStatus, Injectable } from '@nestjs/common';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
 import { PaginationDto } from '../common/dtos/pagination/pagination.dto';
-import {
-  ApiAllResponse,
-  ApiOneResponse,
-} from 'src/common/interfaces/api-response.interface';
+import { ApiAllResponse, ApiOneResponse, } from 'src/common/interfaces/api-response.interface';
 import { CustomerEntity } from './entities/customer.entity';
 import { ManagerError } from 'src/common/errors/manager.error';
 import { Repository, UpdateResult } from 'typeorm';
@@ -16,7 +13,7 @@ export class CustomersService {
   constructor(
     @InjectRepository(CustomerEntity)
     private readonly customersRepository: Repository<CustomerEntity>,
-  ) {}
+  ) { }
   async create(
     createCustomerDto: CreateCustomerDto,
   ): Promise<ApiOneResponse<CustomerEntity>> {
